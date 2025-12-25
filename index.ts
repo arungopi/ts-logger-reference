@@ -20,27 +20,27 @@ const logger = {
     },
     debug : (message:string, ...others: unknown[]) => {
         if(minLogLevel <= logLevels.DEBUG){
-            console.trace(`DEBUG:${message}`, ...others);
+            console.debug(`DEBUG:${message}`, ...others);
         }
     },
     info : (message:string, ...others: unknown[]) => {
         if(minLogLevel <= logLevels.INFO){
-            console.trace(`INFO:${message}`, ...others);
+            console.info(`INFO:${message}`, ...others);
         }
     },
     warn : (message:string, ...others: unknown[]) => {
         if(minLogLevel <= logLevels.WARN){
-            console.trace(`WARN:${message}`, ...others);
+            console.warn(`WARN:${message}`, ...others);
         }
     },
     error : (message:string, ...others: unknown[]) => {
         if(minLogLevel <= logLevels.ERROR){
-            console.trace(`INFO:${message}`, ...others);
+            console.error(`INFO:${message}`, ...others);
         }
     },
     fatal : (message:string, ...others: unknown[]) => {
         if(minLogLevel <= logLevels.FATAL){
-            console.trace(`FATAL:${message}`, ...others);
+            console.error(`FATAL:${message}`, ...others);
         }
     }
 };
